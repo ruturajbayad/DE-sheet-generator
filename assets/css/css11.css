@@ -1,0 +1,33 @@
+.container{
+    /* background-color: rgb(249, 245, 240); */
+    /* border: 1px solid black; */
+    
+    width: 700px;
+    /* margin: 70px 0 0 50px; */
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 200px;
+   }
+   .container2{
+    /* background-color: rgb(249, 245, 240); */
+    /* border: 1px solid black; */
+    width: 700px;
+    
+    /* margin: 70px 0 0 50px; */
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 200px;
+   }
+   .item{
+    /* background-color: aqua;
+     */
+     border: 1px solid black;
+   }
+  .header{
+    width: 700px;
+    display: grid;
+    grid-template-columns: 200px 198px 130px 130px;
+    border: 1px solid black;
+  }
