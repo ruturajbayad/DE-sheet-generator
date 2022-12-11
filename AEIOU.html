@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<title>AEIOU Sheet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
+<body>
+    <style>
+    /*side manu */
+    .sel{
+        float: left;
+        width: 270px;
+        margin-top: 5%;
+        padding: 5px;
+    }
+    .sel1{
+        float: left;
+        width: 270px;
+        margin-top: 5%;
+        padding: 5px;
+    }
+    .sel2{
+        float: left;
+        width: 270px;
+        margin-top: 5%;
+        padding: 5px;
+    }
+    .sel3{
+        width: 5em;
+        height: 40px;
+        font-size: 1.5em;
+        border: none;
+        background-color: #2962ff;
+        color: white;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+        border-radius: 0.2em;
+        outline: none;
+        transition: all 100ms ease-in;
+        margin-top: 5%;
+        margin-left: 23%;
+    }
+    .sel4{
+        float: left;
+        width: 300px;
+        margin-top:20%;
+        padding: 5px;
+    }
+    /*sheet*/
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+   .container{
+        width: 900px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 250px;
+   }
+   .container2{
+        width: 900px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 250px;
+   }
+   .item{
+        border: 1px solid black;
+   }
+  .header{
+        width: 900px;
+        display: grid;
+        grid-template-columns: 255px 215px 155px 130px;
+        border: 1px solid black;
+        }
+    .c1{
+        height: 715px;
+        background-color: lightgray;
+        }
+    .el{
+        float: left;
+        width: 350px;
+        margin-top: 10%;
+        margin-left: 20%;
+        padding: 5px;
+        }
+    /*elements*/
+    .box{
+        margin-top: 3%;
+        width: 135px;
+        height: 35px;
+       /* background-color:rgb(228, 240, 15);*/
+        margin-left: 3%;
+        text-align:center;
+        font-weight: bold;
+        }
+    .flax1{
+        display: flex;
+        flex-wrap: wrap;
+        }
+    .colors{
+        float: left;
+        display: flex;
+        width: 200px;
+        font-family: "Open Sans", sans-serif;
+        margin-top: 5%;
+        margin-left: 1%;
+        font-weight: bold;
+        }
+    .colorc{
+        float: left;
+        display: flex;
+        margin-top: 5%;
+        width: 65px;
+        margin-left: -2%;
+        height: 30px;
+    }
+    .gcss
+    {
+        background-color:rgb(228, 240, 15);
+        width: 100px; 
+        margin-left: 38%; 
+        margin-top: -10%; 
+        text-align: center; 
+        font-weight: bold;
+    }
+    #divmain
+    {
+        background: white;
+        margin-right: 4.4%;
+        /*margin-bottom: 10%;*/
+    }
+    .download
+    {
+        width: 180px;
+        height: 35px;
+        font-size: 20px;
+        border: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+        border-radius: 0.5em;
+        outline: none;
+        transition: all 100ms ease-in;
+        margin-top: 50%;
+        margin-left: 13%;
+        font-weight: bold;
+        color: white;
+    }
+    </style>
+<!-- sidebar -->
+<form action="#">
+<div class="c1" style="width:20%">
+  <h3 class="el">Elements</h3>
+<input type="text"class="sel2" placeholder="Group id" id="gid" minlength="1" maxlength="6" required />
+<input type="date"class="sel2" placeholder="Date" id="date" required />
+<input type="text"class="sel2" placeholder="Domain Name" id="dname" minlength="1" maxlength="20" required />
+<input type="text"class="sel2" placeholder="Version" id="version" minlength="1" maxlength="4" required />
+<button type="button" value="Add" class="sel3" onclick="setheader() " id="btn">Set</button>
+  <select name="element" class="sel" id="li">
+    <option value="Environment">Environment</option>
+    <option value="Activity">Activity</option>
+    <option value="Users">Users</option>
+    <option value="Interactions">Interactions</option>
+    <option value="Objects">Objects</option>
+</select>
+<input type="text" minlength="1" maxlength="1"  placeholder="Enter numbers of elements" class="sel1" id="number" required/>
+<input type="text"class="sel2" placeholder="Element name" id="value" minlength="1" maxlength="14" required />
+<h5 class="colors">Select Color of Note :</h5> <input type="color" class="colorc" name="color" id="color"/>
+<button type="button" value="Add"class="sel3" onclick="countnumber() " id="btn">Add</button>
+<button type="button" value="Reset" class="sel3" onclick="window.location.reload()" id="btn2">Reset</button>
+</div>
+</form>
+
+<!-- Page Content -->
+<div style="margin-left:30%;"  >
+    <div style="margin:-70% 0%;">
+    <div id="divmain">
+        <div class="header">
+            <div class="h1"><h3><b>&nbsp;AEIOU Summary:</b></h3></div>
+            <div class="group">
+                <div class="id" id="gdiv">Group ID :</div>
+                <div class="name">Domain Name :<div id="d11" style="width: 205px; background-color:rgb(228, 240, 15); margin-left: 57%; margin-top: -9%; text-align: center; font-weight: bold;"></div></div>
+            </div>
+            <div class="date">Date :<div id="d22" style=" background-color:rgb(228, 240, 15); margin-left: 30.60%; margin-top: -14%; text-align: center; font-weight: bold;"></div></div>
+            <div class="version">Version :<div id="d33" style="width: 60px; background-color:rgb(228, 240, 15); margin-left: 50%; margin-top: -16.70%; text-align: center; font-weight: bold;"></div></div>
+        </div>
+    <div class="container">
+        <div class="item flax1" id="dive">&nbsp Environment:
+
+            <!--  <div id="div1"><b>Home</b> </div> -->
+             <!-- <div style="width: 100px; background-color:rgb(228, 240, 15); margin-left: 52%; margin-top: -10%; text-align: center;"><b>Home</b></div> -->
+        </div>
+        <div class="item flax1" id="divi">&nbsp Interactions:</div>
+        <div class="item  flax1" id="divo">&nbsp Objects:</div>
+    
+    </div>
+    <div class="container2">
+        <div class="item flax1" id="diva">&nbsp Activities:</div>
+        <div class="item flax1" id="divu">&nbsp Users:</div>
+    </div>
+    </div>
+    </div>
+</div>  
+<button type="button" class="download" id="dow">Download Sheet</button> 
+<button type="button" class="download" id="save" style="margin-left:0%">Save Sheet</button>  
+<button type="button"  class="download" onclick="window.history.back()" id="Home" style="margin-left:0%">Back Home</button> 
+
+
+<!-- scripting -->
+<script type="text/javascript" src="dom-to-image.js"></script>
+<script type="text/javascript">
+                var count = 0;
+               function countnumber()
+               {    
+                    var text = document.getElementById("value").value;
+                    var selectElement = document.querySelector('#li');
+                    output = selectElement.value;
+                    let inputVal = document.getElementById("number").value;
+                   // alert(count);
+                   if(inputVal=="" || inputVal==null || text=="" || text==null)
+                    {
+                    alert("Enter Somting In Text Box");
+                    }
+                        else if(inputVal>count){
+                        temp = AddDive();
+                        count++;
+                    }
+                else{
+                        alert("Please select new portion");
+                        count=0;    
+                    }
+            }
+            function AddDive() {
+                    //entered elements
+                    var text = document.getElementById("value").value;
+                    var selectElement = document.querySelector('#li');
+                    var colors = document.getElementById("color").value;
+                    output = selectElement.value;
+                    var newelement = document.createElement("div");
+                    var selectElement = document.querySelector('#li');
+                    output = selectElement.value;
+                    if(output == "Environment"){
+                    newelement.className = 'box';
+                    newelement.id = 'div1';
+                    newelement.innerText = text;
+                    newelement.style.backgroundColor = colors;
+                    // var newdiv = document.getElementById("div1");
+                    // newdiv.style.backgroundColor = "FF00FF";
+                    let con = document.getElementById('dive');
+                    con.appendChild(newelement); 
+                    //console.log("newelement");
+                    }
+                    else if(output == "Activity"){
+                    newelement.className = 'box';
+                    newelement.id = 'div2';
+                    newelement.innerText = text;
+                    newelement.style.backgroundColor = colors;
+                    let con = document.getElementById('diva');
+                    con.appendChild(newelement);
+                    //console.log("newelement");
+                     }
+                    else if(output == "Users"){
+                    newelement.className = 'box';
+                    newelement.id = 'div3';
+                    newelement.style.backgroundColor = colors;
+                    newelement.innerText = text;
+                    let con = document.getElementById('divu');
+                    con.appendChild(newelement);
+                  //  console.log("newelement");
+                    }
+                    else if(output == "Interactions"){
+                     newelement.className = 'box';
+                    newelement.id = 'div4';
+                    newelement.innerText = text;
+                    newelement.style.backgroundColor = colors;
+                    let con = document.getElementById('divi');
+                    con.appendChild(newelement);
+                    //console.log("newelement");
+                    }
+                    else{
+                    newelement.className = 'box';
+                    newelement.id = 'div5';
+                    newelement.innerText = text;
+                    newelement.style.backgroundColor = colors;
+                    let con = document.getElementById('divo');
+                    con.appendChild(newelement);
+                    //console.log("newelement");
+                    }
+                }
+                function setheader()
+                {
+                    var gid = document.getElementById("gid").value;
+                    var date = document.getElementById("date").value;
+                    var dname = document.getElementById("dname").value;
+                    var version = document.getElementById("version").value;
+                    if(gid == "" || gid == null || date == "" || date == null || dname == "" || dname == null ||version == "" || version == null){
+                            alert("Fill all fields ");
+                    }
+                    else
+                    {
+                    let gdiv = document.getElementById("gdiv");
+                    var newdiv = document.createElement("div");
+                    newdiv.className = "gcss";
+                    newdiv.innerText = gid;
+                    gdiv.appendChild(newdiv);
+                    let d11 = document.getElementById("d11");
+                    let d22 = document.getElementById("d22");
+                    let d33 = document.getElementById("d33");
+                    d11.innerText = dname;
+                    d22.innerText = date;
+                    d33.innerText = version;
+                    }
+                }
+    //Download Image
+                var sheet = document.getElementById("divmain");
+                var dow = document.getElementById("dow");
+                dow.addEventListener("click",() =>{
+                  domtoimage.toPng(sheet).then((data)=>{
+                    var link = document.createElement("a");
+                    link.download="AEIOU-Sheet.png";
+                    link.href = data;
+                    link.click();
+                  })  
+                });
+            </script>
+
+ </body>
+</html>
