@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">
+        .box{
+                width: 100px;
+                background-color:rgb(228, 240, 15);
+                margin-left: 5%;
+                text-align:center;
+        }
+    </style>
+<!DOCTYPE html>
+<html>
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
 <body>
     <style>
+    /*side manu */
         .sel{
         float: left;
         width: 270px;
@@ -48,6 +63,7 @@
         margin-top:20%;
         padding: 5px;
     }
+    /*sheet*/
      *{
             margin: 0;
             padding: 0;
@@ -57,23 +73,22 @@
     /* background-color: rgb(249, 245, 240); */
     /* border: 1px solid black; */
     
-    width: 700px;
+    width: 900px;
     /* margin: 70px 0 0 50px; */
-
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 200px;
+    grid-template-rows: 250px;
    }
    .container2{
     /* background-color: rgb(249, 245, 240); */
     /* border: 1px solid black; */
-    width: 700px;
+    width: 900px;
     
     /* margin: 70px 0 0 50px; */
 
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 200px;
+    grid-template-rows: 250px;
    }
    .item{
     /* background-color: aqua;
@@ -81,14 +96,14 @@
      border: 1px solid black;
    }
   .header{
-    width: 700px;
+    width: 900px;
     display: grid;
-    grid-template-columns: 200px 198px 130px 130px;
+    grid-template-columns: 255px 215px 155px 130px;
     border: 1px solid black;
   }
-  .sheet{
+  /*.sheet{
         margin-top: 10%;
-  }
+  }*/
   .c1
   {
         height: 715px;
@@ -102,13 +117,14 @@
         padding: 5px;
 
         }
+    /*elements*/
         .box{
 
                 margin-top: 3%;
-                width: 100px;
-                height: 25px;
+                width: 135px;
+                height: 35px;
                 background-color:rgb(228, 240, 15);
-                margin-left: 5%;
+                margin-left: 3%;
                 text-align:center;
                 
 
@@ -127,8 +143,8 @@
         
 
     </style>
+<!-- sidebar -->
 <form action="#">
-<!-- Sidebar -->
 <div class="c1" style="width:20%">
   <h3 class="el">Elements</h3>
   <select name="element" class="sel" id="li">
@@ -139,17 +155,17 @@
     <option value="Objects">Objects</option>
 </select>
 <input type="text" minlength="1" maxlength="1" placeholder="Enter numbers of elements" class="sel1" id="number" />
-<input type="text"class="sel2" placeholder="Element name" id="value" minlength="1" maxlength="12"/>
+<input type="text"class="sel2" placeholder="Element name" id="value" minlength="1" maxlength="14"/>
 <button type="button" value="Add" class="sel3" onclick="countnumber()" id="btn">Add</button>
 <!-- <input type="submit" value="Add"  onclick="AddDive()" /> -->
 </div>
 </form>
 
 <!-- Page Content -->
-<div style="margin-left:25%;">
-    <div style="margin:-55% 0%;">
+<div style="margin-left:30%;">
+    <div style="margin:-70% 0%;">
         <div class="header">
-            <div class="h1"><h3> &nbsp; AEIOU Summary</h3></div>
+            <div class="h1"><h3><b>&nbsp;AEIOU Summary:</b></h3></div>
             <div class="group">
                 <div class="id">Group ID :</div>
                 <div class="name">Domain Name :</div>
@@ -158,69 +174,55 @@
             <div class="version">Version :</div>
         </div>
     <div class="container">
-        <div class="item item1 flax1" id="dive">&nbsp Environment:
+        <div class="item flax1" id="dive">&nbsp Environment:
 
             <!--  <div id="div1"><b>Home</b> </div> -->
              <!-- <div style="width: 100px; background-color:rgb(228, 240, 15); margin-left: 52%; margin-top: -10%; text-align: center;"><b>Home</b></div> -->
         </div>
-        <div class="item item2 flax1" id="divi">&nbsp Interactions:</div>
-        <div class="item item3 flax1" id="divo">&nbsp Objects:</div>
+        <div class="item flax1" id="divi">&nbsp Interactions:</div>
+        <div class="item  flax1" id="divo">&nbsp Objects:</div>
     
     </div>
     <div class="container2">
-        <div class="item item4 flax1" id="diva">&nbsp Activities:</div>
-        <div class="item item5 flax1" id="divu">&nbsp Users:</div>
+        <div class="item flax1" id="diva">&nbsp Activities:</div>
+        <div class="item flax1" id="divu">&nbsp Users:</div>
     </div>
     </div>
 </div>    
-<!-- <div id="wrapper"> -->
-   <!--  <header id="header">
-        <div class="inner">
-                <nav>
-                    <ul>
-                        <li><a href="#menu">Menu</a></li>
-                    </ul>
-                </nav>
-        </div>
-    </header>
-    <nav id="menu">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">About</a></li>
-            <li><a href="index.html">Logout</a></li>
-           	<li><a href="generic.html">Consequat dolor</a></li>
-        <li><a href="elements.html">Elements</a></li>  
-        </ul>
-    </nav>  
-            <script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>-->
-            <script type="text/javascript">
+
+<!-- scripting -->
+<script type="text/javascript">
                 var count = 0;
+                
+                var temp;
                function countnumber()
                {
+                    var selectElement = document.querySelector('#li');
+                    output = selectElement.value;
+                    
                     let inputVal = document.getElementById("number").value;
+                    
                    // alert(count);
-                  if(inputVal=="" || inputVal==null)
+                   if(inputVal=="" || inputVal==null)
                     {
                     alert("enter somthing");
                     }
                     else if(inputVal>count){
-                    AddDive();
+                     temp = AddDive();
                     count++;
                 }
-                else{
-                    alert("not allow more select next portion");
-                    return count=0;
+                else {
+                    alert("change portion");
+                    count=0;
                 }
 
-               }
+            }
 
             function AddDive() { 
                 {
+                    var selectElement = document.querySelector('#li');
+                    output = selectElement.value;
+                    // temp = output;
                 // // body...
                 // if(inputVal==0 && inputVal==null)
                 // {
@@ -231,7 +233,8 @@
                  var selectElement = document.querySelector('#li');
                 output = selectElement.value;
                 var text = document.getElementById("value").value;
-                console.log(output);
+                
+                //console.log(output);
                 // let count=0;
                 // let btn = document.getElementById('btn');
                 // btn.onclick = function()
@@ -284,6 +287,7 @@
                 }
                     
             }
+            return output;
         }
             </script>
  </body>
