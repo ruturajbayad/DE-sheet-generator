@@ -173,7 +173,8 @@
 <div class="c1" style="width:20%">
   <h3 class="el">Elements</h3>
 <input type="text"class="sel2" placeholder="Group id" id="gid" minlength="1" maxlength="6" required />
-<input type="date"class="sel2" placeholder="Date" id="date" required />
+<!-- <input type="date"class="sel2" placeholder="Date" id="date" required /> -->
+<input type="text"class="sel2" placeholder="Date" id="date" onfocus="(this.type='date')" required/>
 <input type="text"class="sel2" placeholder="Domain Name" id="dname" minlength="1" maxlength="20" required />
 <input type="text"class="sel2" placeholder="Version" id="version" minlength="1" maxlength="4" required />
 <button type="button" value="Add" class="sel3" onclick="setheader() " id="btn">Set</button>
