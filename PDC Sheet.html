@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            background: #e6e6e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            width: 800px;
+            background-color: #eeeeee;
+
+            display: grid;
+            grid-template-columns: 200px 360px 240px;
+            /* grid-template-rows: 100px 140px 150px 210px;   */
+            grid-template-rows: 60.95px 100px 140px 50px 100px 210px;
+            /* 600 */
+        }
+        nav{
+            /* background: #d3c6bd; */
+            grid-row: 2 / 5;
+        }
+        aside{
+            /* background: #b09c98; */
+            grid-row: 2 / 3;
+        }
+        .box1{
+            /* background: #d3c6b8; */
+            grid-row: 2 / 5;
+        }
+        .box2{
+            /* background: #d3c6b8; */
+            grid-row: 3 / 4
+        }
+        .box3{
+            /* background: #d3c6b8; */
+            grid-row: 4 / 6;
+        }
+        .box4{
+            /* background: #d3c6b8; */
+            grid-row: 5 / -1;
+        }
+        .main-content{
+            /* background: #b09c98; */
+            grid-row: 6 / -1;
+            /* height: 360px; */
+        }
+        footer{
+            /* background: #d3c6b8; */
+            grid-row: 5 / -1;
+        }
+        main, nav, aside, article, footer, section{
+    /* background-color: aqua;
+     */
+     text-align: center;
+     border: 1px solid black;
+   }
+      
+  .header{
+    width: 800px;
+
+    display: grid;
+    grid-template-columns: 320px 480px;
+    border: none;
+    padding-bottom: 10px;
+    text-align: left;
+   
+    /* border: 1px solid black; */
+  }
+  .logo{
+            text-decoration: none;
+        }
+
+			 .logo > * {
+				display: inline-block;
+				vertical-align: top;
+			}
+            .logo{
+	vertical-align: middle;
+} 
+
+		 .logo {
+			display: block;
+			border-bottom: 0;
+			color: inherit;
+			/* font-weight: 900;
+			letter-spacing: 0.25em;
+			margin: 0 0 2.5em 0; */
+			text-decoration: none;
+			/* text-transform: uppercase; */
+			display: inline-block;
+			
+		}
+			 .logo .symbol {
+				/* margin-right: 0.65em; */
+                align-items: center;
+			}
+
+			    img {
+					display: block;
+					width: 1.7em;
+					height: 1.25em;
+				}
+
+    </style>
+</head>
+<body>
+
+    <main>
+        <!-- <div class="sheet"> -->
+            <div class="header">
+                <div class="pdc"><h3>&nbsp; Product Development Canvas</h3></div>
+                <div class="tdv flax1"><h4>&nbsp; Time/Date/Version</h4></div>
+                <!-- <div class="time"></div>
+                <div class="date">/</div>
+                <div class="version">/</div> -->
+                
+            </div>
+        <!-- </div>   -->
+        <nav class="pur flax1"><i class="fa-regular fa-circle-question"></i>&nbsp; <b>Purpose</b></nav>
+        <aside class="pe flax1"><i class="fa-solid fa-crown"></i>&nbsp;  <b>Product Experience</b></aside>
+        <article class="box1 flax1"><i class="fa-solid fa-clipboard-check"></i>&nbsp; <b>Customer Revalidation</b></article>
+        <article class="box2 flax1"><i class="fa-solid fa-wrench fa-flip-horizontal"></i>&nbsp; <b>Product Functions</b></article>
+        <article class="box3 flax1">
+            <a href="#" class="logo">
+                <span class="symbol"><img src="pficon.jpg" alt="" /></span><span class="title"><b>&nbsp; Product Features</b></span>
+            </a>
+            
+        </article>
+        <article class="box4 flax1">  <i class="fa-solid fa-user-group"></i>&nbsp; <b>People</b></article>
+        <section class="main-content flax1"><i class="fa-solid fa-gears"></i>&nbsp; <b>Components</b></section> 
+        <footer class="RRR flax1"><i class="fa-solid fa-flask"></i>&nbsp; <b>Reject, Redesign, Retain</b></footer>
+    </main>
+</body>
+</html>
