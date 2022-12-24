@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>BMC</title>
+    <style>
+        body{
+            /* height: 100vh;
+            background: #e6e6e6;
+            display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        main{
+            width: 1000px;
+            /* background-color: #eeeeee; */
+
+            display: grid;
+            /* grid-template-columns: 200px 200px 100px 100px 200px 200px; */
+            /* grid-template-rows:63px 220px 220px 160px; */
+            /* 600 */
+        }
+        .sheet
+        {
+            width: 1000px;
+            display: grid;
+            grid-template-columns: 195px 195px 97.5px 97.5px 215px 200px;
+            grid-template-rows: 220px 220px 160px;
+        }
+          /* div{
+            background: grey;
+           
+        } */
+        .box1{
+            grid-area: 1/1/3/2;
+        }
+        .box2{
+            grid-area: 1/2/2/3;
+        }
+        .box3{
+           grid-area: 1/3/3/5;
+        }
+        .box4{
+            grid-area: 1/5/2/6;
+        }
+        .box5{
+            grid-area: 1/6/3/8;
+        }
+        .box6{
+            grid-area: 2/2/3/3 ;
+        }
+        .box7{
+            grid-area: 2/5/3/6;
+        }
+        .box8{
+            grid-area: 3/1/4/4;
+        }
+        .box9{
+            grid-area: 3/4/4/7;
+        }
+        /* .boxa{
+            grid-area: 1/3/2/7;
+            
+        } */
+        .df{
+            /* grid-area: 1/3/2/5; */
+        }
+        .db{
+            /* grid-area: 1/5/2/6; */
+        }
+        .date{
+            /* grid-area: 1/6/2/7; */
+        }
+        .bmc{
+            /* grid-area: 1/1/2/3; */
+            /* margin-top: -10px; */
+        }
+        .item{
+            
+             /* background-color: aqua; */
+             padding: 10px;
+             border: 1.1px solid black;
+        }
+    .header{
+        width: 1000px;
+        height: 36px;
+        display: grid;
+        grid-template-columns: 290px 205px 205px 150px 150px;
+        padding-top: 18px;
+        padding-bottom: 36px;
+        border: 1px solid black;
+    } 
+
+    .sel{
+        float: left;
+        width: 270px;
+        margin-top: 5%;
+        padding: 5px;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+        margin: 0;
+        }
+    .sel1{
+        float: left;
+        width: 270px;
+        margin-top: 5%;
+        padding: 5px;
+    }
+    .sel2{
+        float: left;
+        width: 270px;
+        margin-top: 5%;
+        padding: 5px;
+    }
+    .sel3{
+        width: 5em;
+        height: 40px;
+        font-size: 1.5em;
+        border: none;
+        background-color: #2962ff;
+        color: white;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+        border-radius: 0.2em;
+        outline: none;
+        transition: all 100ms ease-in;
+        margin-top: 5%;
+        margin-left: 23%;
+    }
+    .sel4{
+        float: left;
+        width: 300px;
+        margin-top:20%;
+        padding: 5px;
+    }
+    /*sheet*/
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .c1{
+        height: 950px;
+        width: 333px;
+        background-color: lightgray;
+        }
+    .el{
+        float: left;
+        letter-spacing: 3px;
+        width: 300px;
+        margin-top: 10%;
+        margin-left: 18%;
+        padding: 5px;
+        }
+    /*elements*/
+    .box{
+        margin-top: 3%;
+        display: inline;
+        height: 25px;
+       /* background-color:rgb(228, 240, 15);*/
+        margin-left: 3%;
+        text-align:center;
+        font-weight: bold;
+        }
+        .bigbox{
+        margin-top: 3%;
+        display: inline;
+        height: 25px;
+       /* background-color:rgb(228, 240, 15);*/
+        margin-left: 3%;
+        text-align:center;
+        font-weight: bold;
+        }
+    .flax1{
+        display: flex;
+        flex-wrap: wrap;
+        }
+    .colors{
+        float: left;
+        display: flex;
+        width: 200px;
+        font-family: "Open Sans", sans-serif;
+        margin-top: 5%;
+        margin-left: 1%;
+        font-weight: bold;
+        }
+    .colorc{
+        float: left;
+        display: flex;
+        margin-top: 5%;
+        width: 65px;
+        margin-left: -2%;
+        height: 30px;
+    }
+    #d00
+    {
+        background-color:rgb(228, 240, 15);
+        width: 130px; 
+        display: inline-block;
+        text-align: center; 
+        font-weight: bold;
+    }
+    #d11
+    {
+        background-color:rgb(228, 240, 15);
+        width: 130px; 
+        display: inline-block;
+        text-align: center; 
+        font-weight: bold;
+    }
+    #d22
+    {
+        background-color:rgb(228, 240, 15);
+        width: 100px; 
+        display: inline-block;
+        text-align: center; 
+        font-weight: bold;
+    }
+    #d33{
+        background-color:rgb(228, 240, 15);
+        width: 54px; 
+        display: inline-block;
+        text-align: center; 
+        font-weight: bold;
+    }
+    #divmain
+    {
+        background: white;
+        margin-right: 4.4%;
+        /*margin-bottom: 10%;*/
+    }
+    .download
+    {
+        width: 180px;
+        height: 35px;
+        font-size: 20px;
+        border: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+        border-radius: 0.5em;
+        outline: none;
+        transition: all 100ms ease-in;
+        margin-top: 21px;
+        margin-left: 190px;
+        font-weight: bold;
+        color: white;
+    }
+/*data-placeholder for div*/
+    .placeh:empty:before{
+        content:attr(data-placeholder);
+        color: gray;
+        font-size: 16px;
+        width: 200px;
+    }   
+
+    </style>
+</head>
+<body>
+
+
+<!-- sidebar -->
+<div class="screen" style="display: grid; grid-template-columns: 450px 725px;">
+    <form action="#">
+      <div class="c1" style="width:350px; height: 753px;    padding-left: 30px;">
+        <h3 class="el">ELEMENTS</h3>
+      <input type="text"class="sel2" placeholder="Design For" id="defor" minlength="1" maxlength="13" required />
+      <input type="text"class="sel2" placeholder="Design By" id="deby" minlength="1" maxlength="13" required />
+      <!-- <input type="date"class="sel2" placeholder="Date" id="date" required /> -->
+      <input type="text"class="sel2" placeholder="Date" id="date" onfocus="(this.type='date')" required/>
+      <input type="text"class="sel2" placeholder="Version" id="version" minlength="1" maxlength="3" required />
+      <button type="button" value="Add" class="sel3" onclick="setheader() " id="btn">Set</button>
+        <select name="element" class="sel" id="li">
+          <option value="Key Partners">Key Partners</option>
+          <option value="Key Activities">Key Activities</option>
+          <option value="Value Propositions">Value Propositions</option>
+          <option value="Customer Relationships">Customer Relationships</option>
+          <option value="Customer Segments">Customer Segments</option>
+          <option value="Key Resources">Key Resources</option>
+          <option value="Channels">Channels</option>
+          <option value="Cost Structure">Cost Structure</option>
+          <option value="Revenue Stream">Revenue Stream</option>
+      </select>
+      <input type="number" minlength="1" maxlength="1"  placeholder="Enter numbers of Elements(1 to 9)" class="sel1" id="number" required/>
+      <input type="text"class="sel2" placeholder="Element name" id="value" minlength="1" maxlength="100" required />
+      <!-- <h5 class="colors">Select Color of Note :</h5> <input type="color" class="colorc" name="color" id="color"/> -->
+      <button type="button" value="Add"class="sel3" onclick="countnumber() " id="btn">Add</button>
+      <button type="button" value="Reset" class="sel3" onclick="window.location.reload()" id="btn2">Reset</button>
+      </div>
+      </form>
+      
+<!-- Page Content -->  
+<div class="col2" style="width: 1000px;" >
+    <div style="padding-top: 36px;">
+    <main id="divmain" style="font-weight: bold; font-size: 14px;">
+            <div class="header">
+                <div class="bmc" style="padding-left: 3px; font-size: 17px;">&nbsp;The Bussiness Model Canvas</div>
+                
+                <div class="df">&nbsp;Design:<div id="d00"></div></div>
+                <div class="db">&nbsp;Design:<div id="d11"></div></div>
+                <div class="dt">&nbsp;Date:<div id="d22"></div></div>
+                <div class="vr">&nbsp;Version:<div id="d33"></div></div>
+            </div>
+    <div class="sheet" style="">
+        <div class="box1 item flax1" id="divKeyP">
+            &nbsp;Key Partners
+            <div class="placeh" id="placeKeyP" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) "></div>
+            <!-- <i class="fa-solid fa-link il"></i> -->
+        </div>
+        <div class="box3 item flax1" id="divValP">
+            &nbsp; Value Propositions
+            <div class="placeh" id="placeValP" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) "></div>
+            <!-- <i class="fa-solid fa-gift"></i> -->
+        </div>
+        <div class="box2 item flax1" id="divKeyA">
+            &nbsp;Key Activities
+            <div class="placeh" id="placeKeyA" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) "></div>
+            <!-- <i class="fa-solid fa-square-check"></i> -->
+        </div>
+        <div class="box4 item flax1" id="divCustR">
+            &nbsp;Customer Relationships
+            <div class="placeh" id="placeCustR" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) "></div>
+            <!-- <i class="fa-solid fa-heart"></i> -->
+        </div>
+        <div class="box5 item flax1" id="divCustS">
+            &nbsp;Customer Segments
+            <div class="placeh" id="placeCustS" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) "></div>
+        </div>
+        <div class="box6 item flax1" id="divKeyR">
+            &nbsp;Key Resources
+            <div class="placeh" id="placeKeyR" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) "></div>
+        </div>
+        <div class="box7 item flax1" id="divC">
+            &nbsp;Channels
+            <div class="placeh" id="placeC" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) "></div>
+            <!-- <i class="fa-solid fa-truck"></i> -->
+        </div>
+        <div class="box8 item flax1" id="divCostS">
+            &nbsp;Cost Structure
+            <div class="placeh" id="placeCostS" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) "></div>
+            <!-- <i class="fa-solid fa-tags fa-flip-horizontal"></i> -->
+        </div>
+        <div class="box9 item flax1" id="divRevS">
+            &nbsp;Revenue Stream
+            <div class="placeh" id="placeRevS" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) "></div>
+            <!-- <i class="fa-solid fa-sack-dollar"></i> -->
+            </div>
+     </div>
+    </main>
+</div>
+<div class="downloadbutton">
+<button type="button" class="download" id="dow">Download Sheet</button> 
+<button type="button" class="download" id="save" style="margin-left:0%">Save Sheet</button>  
+<button type="button"  class="download" onclick="window.history.back()" id="Home" style="margin-left:0%">Back Home</button> 
+</div>
+</div>
+</div>
+ 
+<!-- scripting -->
+<script type="text/javascript" src="dom-to-image.js"></script>
+<script type="text/javascript">
+                var count = 0;
+                var rgbValue = [255, 0, 0];
+//validation counter not work properly
+               function countnumber()
+               {    
+                    var text = document.getElementById("value").value;
+                    var selectElement = document.querySelector('#li');
+                    output = selectElement.value;
+                    let inputVal = document.getElementById("number").value;
+                   // alert(count);
+                   if(inputVal=="" || inputVal==null || text=="" || text==null)
+                    {
+                    alert("Enter Somting In Text Box");
+                    }
+                        else if(inputVal>count){
+                        temp = AddDive();
+                        count++;
+                    }
+                else{
+                        alert("Please select new portion");
+                        count=0;    
+                    }
+                }
+//Add div box in spacific portion 
+            function AddDive() {
+                    //random back color logic 
+                    rgbValue[0] = Math.round(Math.random() * 255);
+                    rgbValue[1] = Math.round(Math.random() * 255);
+                    rgbValue[2] = Math.round(Math.random() * 255);
+                    var color = Math.round(((parseInt(rgbValue[0]) * 299) + (parseInt(rgbValue[1]) * 587) +(parseInt(rgbValue[2]) * 114)) / 1000);
+                    var textColor = (color > 125) ? 'black' : 'white';
+                    var backColor = 'rgb(' + rgbValue[0] + ', ' + rgbValue[1] + ', ' + rgbValue[2] + ')';
+                    //entered elements
+                    var text = document.getElementById("value").value;
+                    var selectElement = document.querySelector('#li');
+                    
+                    output = selectElement.value;
+                    var newelement = document.createElement("div");
+                    if(output == "Key Partners"){
+                    document.getElementById("placeKeyP").innerText = " ";
+                    newelement.className = 'box';
+                    newelement.id = 'div1';
+                    newelement.innerText = text;
+                    newelement.style.color=textColor 
+                    newelement.style.backgroundColor = backColor; 
+                    //newelement.style.backgroundColor = 
+                    let con = document.getElementById('divKeyP');
+                    con.appendChild(newelement); 
+                    }
+                    else if(output == "Key Activities"){
+                    document.getElementById("placeKeyA").innerText = " ";
+                    newelement.className = 'box';
+                    newelement.id = 'div2';
+                    newelement.innerText = text;
+                    newelement.style.color=textColor 
+                    newelement.style.backgroundColor = backColor;
+                    let con = document.getElementById('divKeyA');
+                    con.appendChild(newelement);
+                    }
+                    else if(output == "Value Propositions"){
+                    document.getElementById("placeValP").innerText = " ";
+                    newelement.className = 'box';
+                    newelement.id = 'div3';
+                    newelement.innerText = text;
+                    newelement.style.color=textColor 
+                    newelement.style.backgroundColor = backColor;
+                    let con = document.getElementById('divValP');
+                    con.appendChild(newelement);
+                    }
+                    else if(output == "Customer Relationships"){
+                    document.getElementById("placeCustR").innerText = " ";
+                    newelement.className = 'box';
+                    newelement.id = 'div4';
+                    newelement.innerText = text;
+                    newelement.style.color=textColor 
+                    newelement.style.backgroundColor = backColor;
+                    let con = document.getElementById('divCustR');
+                    con.appendChild(newelement);
+                    }
+                    else if(output == "Customer Segments"){
+                    document.getElementById("placeCustS").innerText = " ";
+                    newelement.className = 'box';
+                    newelement.id = 'div5';
+                    newelement.innerText = text;
+                    newelement.style.color=textColor 
+                    newelement.style.backgroundColor = backColor;
+                    let con = document.getElementById('divCustS');
+                    con.appendChild(newelement);
+                    }
+                    else if(output == "Key Resources"){
+                    document.getElementById("placeKeyR").innerText = " ";
+                    newelement.className = 'box';
+                    newelement.id = 'div6';
+                    newelement.innerText = text;
+                    newelement.style.color=textColor 
+                    newelement.style.backgroundColor = backColor;
+                    let con = document.getElementById('divKeyR');
+                    con.appendChild(newelement);
+                    }
+                    else if(output == "Channels"){
+                    document.getElementById("placeC").innerText = " ";
+                    newelement.className = 'box';
+                    newelement.id = 'div7';
+                    newelement.innerText = text;
+                    newelement.style.color=textColor 
+                    newelement.style.backgroundColor = backColor;
+                    let con = document.getElementById('divC');
+                    con.appendChild(newelement);
+                    }
+                    else if(output == "Cost Structure"){
+                    document.getElementById("placeCostS").innerText = " ";
+                    newelement.className = 'box';
+                    newelement.id = 'div8';
+                    newelement.innerText = text;
+                    newelement.style.color=textColor 
+                    newelement.style.backgroundColor = backColor;
+                    let con = document.getElementById('divCostS');
+                    con.appendChild(newelement);
+                    }
+                    else if(output == "Revenue Stream"){
+                    document.getElementById("placeRevS").innerText = " ";
+                    newelement.className = 'box';
+                    newelement.id = 'div9';
+                    newelement.innerText = text;
+                    newelement.style.color=textColor 
+                    newelement.style.backgroundColor = backColor;
+                    let con = document.getElementById('divRevS');
+                    con.appendChild(newelement);
+                    }
+                }
+//header set
+                function setheader()
+                {
+                    var defor = document.getElementById("defor").value;
+                    var date = document.getElementById("date").value;
+                    var deby = document.getElementById("deby").value;
+                    var version = document.getElementById("version").value;
+                    if(defor == "" || defor == null || date == "" || date == null || deby == "" || deby == null ||version == "" || version == null){
+                            alert("Fill all fields ");
+                    }
+                    else
+                    {
+                    // let gdiv = document.getElementById("gdiv");
+                    // var newdiv = document.createElement("div");
+                    // newdiv.className = "gcss";
+                    // newdiv.innerText = defor;
+                    // gdiv.appendChild(newdiv);
+                    
+                    let d00 = document.getElementById("d00");
+                    let d11 = document.getElementById("d11");
+                    let d22 = document.getElementById("d22");
+                    let d33 = document.getElementById("d33");
+                    d00.innerText = defor;
+                    d11.innerText = deby;
+                    d22.innerText = date;
+                    d33.innerText = version;
+                    }
+                }
+//Download Image
+                var sheet = document.getElementById("divmain");
+                var dow = document.getElementById("dow");
+                dow.addEventListener("click",() =>{
+                  domtoimage.toPng(sheet).then((data)=>{
+                    var link = document.createElement("a");
+                    link.download="BMC-Sheet.png";
+                    link.href = data;
+                    link.click();
+                  })  
+                });
+            </script>
+
+ </body>
+</html>
