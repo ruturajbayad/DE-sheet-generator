@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empathy</title>
+    <style>
+   .container{
+    /* background-color: rgb(249, 245, 240); */
+    /* border: 1px solid black; */
+    
+    width: 700px;
+    /* margin: 70px 0 0 50px; */
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 200px;
+   }
+   .container2{
+    /* background-color: rgb(249, 245, 240); */
+    /* border: 1px solid black; */
+    width: 700px;
+    
+    /* margin: 70px 0 0 50px; */
+
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 200px;
+   }
+   .container3{
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 111px;
+   }
+   .container4{
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 100px;
+   }
+   .container5{
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 100px;
+   }
+   .container6{
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 100px;
+   }
+   .item{
+     /* background-color: aqua; */
+    padding: 10px;
+     border: 1px solid black;
+   }
+   
+  .header{
+    width: 700px;
+    display: grid;
+    grid-template-columns: 350px 350px;
+    /* border: 1px solid black; */
+  }
+  body{
+  /* margin-top:10px;
+  margin-left: 50px; */
+  /* margin: 50px; */
+  }
+  .df{
+    padding-bottom: 9px;
+  }
+  .db{
+    padding-bottom: 9px;
+  }
+  .date{
+    padding-bottom: 10px;
+  }
+  .var{
+    padding-bottom: 10px;
+  }
+ .item5{
+    padding-top: 1px;
+ }
+ .sel{
+        float: left;
+        width: 270px;
+        margin-top: 5%;
+        padding: 5px;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+        margin: 0;
+        }
+    .sel1{
+        float: left;
+        width: 270px;
+        margin-top: 5%;
+        padding: 5px;
+    }
+    .sel2{
+        float: left;
+        width: 270px;
+        margin-top: 5%;
+        padding: 5px;
+    }
+    .sel3{
+        width: 5em;
+        height: 40px;
+        font-size: 1.5em;
+        border: none;
+        background-color: #2962ff;
+        color: white;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+        border-radius: 0.2em;
+        outline: none;
+        transition: all 100ms ease-in;
+        margin-top: 5%;
+        margin-left: 23%;
+    }
+    .sel4{
+        float: left;
+        width: 300px;
+        margin-top:20%;
+        padding: 5px;
+    }
+    /*sheet*/
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .c1{
+        height: 950px;
+        width: 333px;
+        background-color: lightgray;
+        }
+    .el{
+        float: left;
+        width: 350px;
+        margin-top: 10%;
+        margin-left: 20%;
+        padding: 5px;
+        }
+    /*elements*/
+    .box{
+        margin-top: 3%;
+        display: inline;
+        height: 25px;
+       /* background-color:rgb(228, 240, 15);*/
+        margin-left: 3%;
+        text-align:center;
+        font-weight: bold;
+        }
+        .bigbox{
+        margin-top: 3%;
+        display: inline;
+        height: 25px;
+       /* background-color:rgb(228, 240, 15);*/
+        margin-left: 3%;
+        text-align:center;
+        font-weight: bold;
+        }
+    .flax1{
+        display: flex;
+        flex-wrap: wrap;
+        }
+    .colors{
+        float: left;
+        display: flex;
+        width: 200px;
+        font-family: "Open Sans", sans-serif;
+        margin-top: 5%;
+        margin-left: 1%;
+        font-weight: bold;
+        }
+    .colorc{
+        float: left;
+        display: flex;
+        margin-top: 5%;
+        width: 65px;
+        margin-left: -2%;
+        height: 30px;
+    }
+    .gcss
+    {
+        background-color:rgb(228, 240, 15);
+        width: 205px; 
+        display: inline-block;
+        text-align: center; 
+        font-weight: bold;
+    }
+    #divmain
+    {
+        background: white;
+        margin-right: 4.4%;
+        /*margin-bottom: 10%;*/
+    }
+    .download
+    {
+        width: 180px;
+        height: 35px;
+        font-size: 20px;
+        border: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+        border-radius: 0.5em;
+        outline: none;
+        transition: all 100ms ease-in;
+        margin-top: 21px;
+        margin-left: 75px;
+        font-weight: bold;
+        color: white;
+    }
+/*data-placeholder for div*/
+    .placeh:empty:before{
+        content:attr(data-placeholder);
+        color: gray;
+        font-size: 16px;
+        width: 200px;
+    }
+    </style>
+</head>
+<body>
+<div>
+<!-- sidebar -->
+<div class="screen" style="display: grid; grid-template-columns: 450px 725px;">
+  <form action="#">
+    <div class="c1" style="width:350px; height: 963px;    padding-left: 30px;">
+      <h3 class="el">Elements</h3>
+    <input type="text"class="sel2" placeholder="Design For" id="defor" minlength="1" maxlength="21" required />
+    <input type="text"class="sel2" placeholder="Design By" id="deby" minlength="1" maxlength="21" required />
+    <!-- <input type="date"class="sel2" placeholder="Date" id="date" required /> -->
+    <input type="text"class="sel2" placeholder="Date" id="date" onfocus="(this.type='date')" required/>
+    <input type="text"class="sel2" placeholder="Version" id="version" minlength="1" maxlength="4" required />
+    <button type="button" value="Add" class="sel3" onclick="setheader() " id="btn">Set</button>
+      <select name="element" class="sel" id="li">
+        <option value="USER">USER</option>
+        <option value="STAKEHOLDERS">STAKEHOLDERS</option>
+        <option value="ACTIVITIES">ACTIVITIES</option>
+    </select>
+    <input type="number" minlength="1" maxlength="1"  placeholder="Enter numbers of elements(1 to 9)" class="sel1" id="number" required/>
+    <input type="text"class="sel2" placeholder="Element name" id="value" minlength="1" maxlength="100" required />
+    <!-- <h5 class="colors">Select Color of Note :</h5> <input type="color" class="colorc" name="color" id="color"/> -->
+    <button type="button" value="Add"class="sel3" onclick="countnumber() " id="btn">Add</button>
+    <button type="button" value="Reset" class="sel3" onclick="window.location.reload()" id="btn2">Reset</button>
+    </div>
+    </form>
+    
+
+    
+<!-- Page Content -->
+<div class="col2" style="width: 725px;" >
+    <div style="padding-top: 36px;">
+    <div id="divmain">
+    <div class="header" style="font-size: large;font-weight: bold;">
+        <div class="df" id="gdiv">Design For
+        </div>
+        <div class="db">Design By
+            <div id="d11" style="width: 205px; background-color:rgb(228, 240, 15); display: inline-block; text-align: center; font-weight: bold;"></div></div>
+    
+        <div class="date">Date
+            <div id="d22" style=" background-color:rgb(228, 240, 15); width: 90px; display: inline-block; text-align: center; font-weight: bold;"></div></div>
+        <div class="ver">Version
+            <div id="d33" style="width: 60px; background-color:rgb(228, 240, 15); display: inline-block; text-align: center; font-weight: bold;"></div></div>
+    </div>
+    
+<div class="container">
+    <div class="item flax1 item1" id="divU"><b>USER</b>
+        <div class="placeh" id="placeu" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) - Scene of user in context , Elements, features and special notes "></div>
+    </div>
+    <div class="item flax1 item2" id="divS"><b>STAKEHOLDERS</b>
+        <div class="placeh" id="places" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) - Scene of user in context , Elements, features and special notes "></div></div>
+   
+</div>
+<div class="container2">
+    <div class="item flax1 item3" id="divA"><b>ACTIVITIES</b>
+        <div class="placeh" id="placea" contentEditable="false" data-placeholder="  - Sketch/photo Summary of activity , Elements, features and special notes"></div>
+    </div>
+</div>
+<div class="container3">
+    <div class="item item4"><b>STORY BOARDING</b>
+    <br/>
+    <div class="item5" style="padding-bottom: 8.1px;">HAPPY</div>
+    <textarea id="hp1" rows="2" cols="87" style="font-size: 15px; padding: 3px; font-family: 'Times New Roman', Times, serif;"></textarea>
+    </div>
+</div>
+   
+<div class="container4">
+    <div class="item">
+    <div class="item6" style="padding-bottom: 10px;">HAPPY</div>
+    <textarea id="hp2" rows="2" cols="87" style="font-size: 15px; padding: 3px; font-family: 'Times New Roman', Times, serif;"></textarea>
+</div>
+</div>
+  
+<div class="container5">
+    <div class="item">
+    <div class="item7" style="padding-bottom: 10px;">SAD</div>
+    <textarea id="sd1" rows="2" cols="87" style="font-size: 15px; padding: 3px; font-family: 'Times New Roman', Times, serif;"></textarea>
+</div>
+</div>
+  
+<div class="container6">
+    <div class="item">
+    <div class="item8" style="padding-bottom: 10px;">SAD</div>
+    <textarea id="sd2" rows="2" cols="87" style="font-size: 15px; padding: 3px; font-family: 'Times New Roman', Times, serif;"></textarea>
+</div>
+
+</div>
+</div>
+</div>
+<button type="button" class="download" id="dow">Download Sheet</button> 
+<button type="button" class="download" id="save" style="margin-left:0%">Save Sheet</button>  
+<button type="button"  class="download" onclick="window.history.back()" id="Home" style="margin-left:0%">Back Home</button> 
+</div>
+</div>
+
+
+
+<!-- scripting -->
+<script type="text/javascript" src="dom-to-image.js"></script>
+<script type="text/javascript">
+                var count = 0;
+                var rgbValue = [255, 0, 0];
+//validation counter not work properly
+               function countnumber()
+               {    
+                    var text = document.getElementById("value").value;
+                    var selectElement = document.querySelector('#li');
+                    output = selectElement.value;
+                    let inputVal = document.getElementById("number").value;
+                   // alert(count);
+                   if(inputVal=="" || inputVal==null || text=="" || text==null)
+                    {
+                    alert("Enter Somting In Text Box");
+                    }
+                        else if(inputVal>count){
+                        temp = AddDive();
+                        count++;
+                    }
+                else{
+                        alert("Please select new portion");
+                        count=0;    
+                    }
+                }
+//Add div box in spacific portion 
+            function AddDive() {
+                    //random back color logic 
+                    rgbValue[0] = Math.round(Math.random() * 255);
+                    rgbValue[1] = Math.round(Math.random() * 255);
+                    rgbValue[2] = Math.round(Math.random() * 255);
+                    var color = Math.round(((parseInt(rgbValue[0]) * 299) + (parseInt(rgbValue[1]) * 587) +(parseInt(rgbValue[2]) * 114)) / 1000);
+                    var textColor = (color > 125) ? 'black' : 'white';
+                    var backColor = 'rgb(' + rgbValue[0] + ', ' + rgbValue[1] + ', ' + rgbValue[2] + ')';
+                    //entered elements
+                    var text = document.getElementById("value").value;
+                    var selectElement = document.querySelector('#li');
+                    
+                    output = selectElement.value;
+                    var newelement = document.createElement("div");
+                    if(output == "STAKEHOLDERS"){
+                    document.getElementById("places").innerText = " ";
+                    newelement.className = 'box';
+                    newelement.id = 'div1';
+                    newelement.innerText = text;
+                    newelement.style.color=textColor 
+                    newelement.style.backgroundColor = backColor; 
+                    //newelement.style.backgroundColor = 
+                    let con = document.getElementById('divS');
+                    con.appendChild(newelement); 
+                    }
+                    else if(output == "ACTIVITIES"){
+                    document.getElementById("placea").innerText = " ";
+                    newelement.className = 'box';
+                    newelement.id = 'div2';
+                    newelement.innerText = text;
+                    newelement.style.color=textColor 
+                    newelement.style.backgroundColor = backColor;
+                    let con = document.getElementById('divA');
+                    con.appendChild(newelement);
+                    }
+                    else if(output == "USER"){
+                    document.getElementById("placeu").innerText = " ";
+                    newelement.className = 'box';
+                    newelement.id = 'div3';
+                    newelement.innerText = text;
+                    newelement.style.color=textColor 
+                    newelement.style.backgroundColor = backColor;
+                    let con = document.getElementById('divU');
+                    con.appendChild(newelement);
+                    }
+                }
+//header set
+                function setheader()
+                {
+                    var gid = document.getElementById("defor").value;
+                    var date = document.getElementById("date").value;
+                    var dname = document.getElementById("deby").value;
+                    var version = document.getElementById("version").value;
+                    if(defor == "" || defor == null || date == "" || date == null || deby == "" || deby == null ||version == "" || version == null){
+                            alert("Fill all fields ");
+                    }
+                    else
+                    {
+                    let gdiv = document.getElementById("gdiv");
+                    var newdiv = document.createElement("div");
+                    newdiv.className = "gcss";
+                    newdiv.innerText = gid;
+                    gdiv.appendChild(newdiv);
+                    let d11 = document.getElementById("d11");
+                    let d22 = document.getElementById("d22");
+                    let d33 = document.getElementById("d33");
+                    d11.innerText = dname;
+                    d22.innerText = date;
+                    d33.innerText = version;
+                    }
+                }
+//Download Image
+                var sheet = document.getElementById("divmain");
+                var dow = document.getElementById("dow");
+                dow.addEventListener("click",() =>{
+                  domtoimage.toPng(sheet).then((data)=>{
+                    var link = document.createElement("a");
+                    link.download="Empathy-Sheet.png";
+                    link.href = data;
+                    link.click();
+                  })  
+                });
+            </script>
+
+ </body>
+</html>
