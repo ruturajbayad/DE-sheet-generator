@@ -10,23 +10,25 @@
 <div class="background">
 <!-- sidebar -->
     <form action="#">
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
         <h3 class="elementtext">ELEMENTS</h3>
         <input type="text"class="inputs" placeholder="Group id" id="gid" minlength="1" maxlength="6" required />
         <input type="text"class="inputs" placeholder="Date" id="date" onfocus="(this.type='date')" required/>
         <input type="text"class="inputs" placeholder="Domain Name" id="dname" minlength="1" maxlength="20" required />
         <input type="text"class="inputs" placeholder="Version" id="version" minlength="1" maxlength="4" required />
         <button type="button" value="Add" class="sidebutton" id="setb" onclick="setheader()">Set</button>
-            <select name="element" class="inputs" id="li">
+            <select name="element" class="inputs" id="portion">
+                <option value="Select" selected>Select portion</option>
                 <option value="Environment">Environment</option>
                 <option value="Activity">Activity</option>
                 <option value="Users">Users</option>
                 <option value="Interactions">Interactions</option>
                 <option value="Objects">Objects</option>
             </select> 
-        <input type="number" minlength="1" maxlength="1"  placeholder="Enter numbers of elements(1 to 9)" class="inputs" id="number" required/>
-        <input type="text"class="inputs" placeholder="Element name" id="value" minlength="1" maxlength="100" required />
-        <button type="button"  value="Add"class="sidebutton" onclick="countnumber() " id="btn">Add</button>
+        <!-- <input type="number" minlength="1" maxlength="1"  placeholder="Enter numbers of elements(1 to 9)" class="inputs" id="number" required/> -->
+        <input type="text"class="inputs inpu" placeholder="Element name" id="value" minlength="1" maxlength="100" required />
+        <div id="inputs1"></div>
+        <button type="button"  value="Add"class="sidebutton" onclick="AddStikeyNotes() " id="btn1">Add</button>
         <button type="button"  value="Reset" class="sidebutton" onclick="window.location.reload()" id="btn2">Reset</button>
         </div>
     </form>
