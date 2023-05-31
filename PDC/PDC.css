@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+    margin: 0;
+    }
+/* page background */
+.background{
+        
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 400px 840px;
+        background-color: #0d3149;
+        background-image: 
+            radial-gradient(at 47% 33%, hsl(156.92, 10%, 27%) 0, transparent 59%), 
+            radial-gradient(at 82% 65%, hsl(198.00, 100%, 50%) 0, transparent 55%);
+        }
+
+/* sidebar */
+.sidebar{
+        margin-top: 10px;
+        margin-left: 30px;
+        width:350px; 
+        height: 640px;
+        backdrop-filter: blur(25px) saturate(176%);
+        -webkit-backdrop-filter: blur(25px) saturate(176%);
+        background-color: rgba(255, 255, 255, 0.37);
+        border-radius: 30px;
+        border: 1px solid rgba(209, 213, 219, 0.3);
+        }
+        .elementtext{
+            float: left;
+            letter-spacing: 3px;
+            width: 300px;
+            margin-top: 10%;
+            margin-left: 80px;
+            padding: 5px;
+            color: aliceblue;
+        }
+        .inputs{
+            margin-left: 35px;
+            float: left;
+            width: 230px;
+            margin-top: 5%;
+            padding: 5px;
+            backdrop-filter: blur(25px) saturate(200%);
+            -webkit-backdrop-filter: blur(25px) saturate(200%);
+            background-color: rgba(255, 255, 255, 0.63);
+            border-radius: 12px;
+            border: 1px solid rgba(209, 213, 219, 0.3);
+        }   
+        .sidebutton{
+            width: 5em;
+            height: 40px;
+            font-size: 1.5em;
+            border: none;
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            background-color: rgba(0, 0, 0, 0.75);
+            border-radius: 10px;
+            border: 1px solid rgba(209, 213, 219, 0.3);
+            color: white;
+            cursor: pointer;
+            font-family: "Open Sans", sans-serif;
+            font-weight: bold;
+            outline: none;
+            transition: all 100ms ease-in;
+            margin-top: 5%;
+            margin-left: 90px;
+        }
+/*sheet*/
+#mainsheet{
+    margin-top: 26px;
+    margin-left: 36px;
+    width: 800px;
+    background: rgb(255, 255, 255);
+    margin-right: 4.4%;
+    border: 1px solid black;
+}
+    .pur{
+        grid-row: 2 / 5;
+        
+    }
+    .pe{
+        grid-row: 2 / 3;
+    }
+    .box1{
+        grid-row: 2 / 5;
+    }
+    .box2{
+        grid-row: 3 / 4
+    }
+    .box3{
+        grid-row: 4 / 6;
+    }
+    .box4{
+        grid-row: 5 / -1;
+    }
+    .main-content{
+        grid-row: 6 / -1;
+    }
+    .RRR{
+        grid-row: 5 / -1;
+    }
+
+    /* Sheet header */
+    .time
+    {
+        /* background-color:rgb(228, 240, 15); */
+        width: 110px; 
+        display: inline-block;
+        text-align: center; 
+        font-weight: bold;
+    }
+    .date
+    {
+        background-color:rgb(228, 240, 15);
+        width: 100px; 
+        display: inline-block;
+        text-align: center; 
+        font-weight: bold;
+    }
+    .version{
+        background-color:rgb(228, 240, 15);
+        width: 54px; 
+        display: inline-block;
+        text-align: center; 
+        font-weight: bold;
+    }
+    .sheetheader{
+        width: 800px;
+        height: 23px;
+        padding-top: 3px;
+        display: grid;
+        grid-template-columns: 320px 480px;
+        border: none;
+        /* padding-bottom: 10px; */
+        text-align: left;
+        font-weight: bold;
+        
+    }
+    .tdv{
+        display: flex;
+    }
+    .sheet{
+        padding-top: 10px;
+        width: 800px;
+        display: grid;
+        grid-template-columns: 200px 360px 240px;
+        grid-template-rows: 6px 100px 140px 50px 100px 210px;
+        font-size: 15px;
+    }
+    
+    .border{
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 9px;
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+/*elements*/
+.box{
+    margin-top: 3%;
+    display: inline;
+    height: 35px;
+   /* background-color:rgb(228, 240, 15); */
+    margin-left: 3%;
+    text-align:center;
+    font-weight: bold;
+    }
+    .bigbox{
+    margin-top: 3%;
+    display: inline;
+    height: 35px;
+   /* background-color:rgb(228, 240, 15); */
+    margin-left: 3%;
+    text-align:center;
+    font-weight: bold;
+    }
+.colors{
+    float: left;
+    display: flex;
+    width: 200px;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 5%;
+    margin-left: 1%;
+    font-weight: bold;
+    }
+.colorc{
+    float: left;
+    display: flex;
+    margin-top: 5%;
+    width: 65px;
+    margin-left: -2%;
+    height: 30px;
+}
+/* .gcc
+{
+    background-color:rgb(228, 240, 15);
+    width: 100px; 
+    margin-left: 38%; 
+    margin-top: -10%; 
+    text-align: center; 
+    font-weight: bold;
+} */
+
+/* header sheet stiky not  */
+
+
+.bottombuttons
+{
+    width: 180px;
+    height: 35px;
+    font-size: 20px;
+    border: none;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    color: white;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    outline: none;
+    transition: all 100ms ease-in;
+    margin-top: 10px;
+    margin-left: 150px;
+    font-weight: bold;
+    color: white;
+}
+#save, #Home{
+	margin-left:0%
+}
+
+/*data-placeholder for div*/
+.placeh:empty:before{
+    content:attr(data-placeholder);
+    color: gray;
+    font-size: 6.5px;
+    /* width: 200px; */
+}
+/* useless but need */
+.col2{
+    width: 1000px; 
+    height: 700px;  
+}
+
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<title>PDC</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Style -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="PDC.css" /> 
+	<!-- Script -->
+	<script type="text/javascript" src="PDC.js"></script>
+	<!-- <script type="text/javascript" src="dom-to-image.js"></script> -->
+	<body>
+		
+		<div class="background">
+			<!-- sidebar -->
+			<form action="#">
+				<div class="sidebar" id="sidebar">
+					<h3 class="elementtext">ELEMENTS</h3>
+                    <input type="text" class="inputs" placeholder="Time" id="time" onfocus="(this.type='time')" required/>
+                    <input type="text" class="inputs" placeholder="Date" id="date" onfocus="(this.type='date')" required/>
+					<input type="text" class="inputs" placeholder="Version" id="version" minlength="1" maxlength="4" required />
+					<button type="button" value="Add" class="sidebutton" id="setb" onclick="setheader()">Set</button>
+					<select name="element" class="inputs" id="portion">
+						<option value="Select" selected>Select Portion</option>
+						<option value="Purpose">Purpose</option>
+                        <option value="Product Experience">Product Experience</option>
+                        <option value="Customer Revalidation">Customer Revalidation</option>
+                        <option value="Product Functions">Product Functions</option>
+                        <option value="People">People</option>
+                        <option value="Product Features">Product Features</option>
+                        <option value="RRR">Reject, Redesign, Retain</option>
+                        <option value="Components">Components</option>
+					</select> 
+					<!-- <input type="number" minlength="1" maxlength="1"  placeholder="Enter numbers of elements(1 to 9)" class="inputs" id="number" required/> -->
+					<input type="text"class="inputs inpu" placeholder="Element name" id="value" minlength="1" maxlength="100" required />
+					<div id="inputs1"></div>
+					<button type="button"  value="Add"class="sidebutton" onclick="AddStikeyNotes()" id="btn1">Add</button>
+					<button type="button"  value="Reset" class="sidebutton" onclick="window.location.reload()" id="btn2">Reset</button>
+				</div>
+			</form>
+			
+			<!-- Page Content -->
+			<div class="col2">
+				<!-- mainsheet -->
+				<div id="mainsheet">
+					<!-- sheetheader -->
+					<div class="sheetheader">
+                        <div class="pdc">&nbsp; Product Development Canvas</div>
+                        <div class="tdv  ">&nbsp; Time/Date/Version
+                        <div>
+                            <div class="time" id="d11"></div>/
+                            <div class="date" id="d22"></div>/
+                            <div class="version" id="d33"></div>
+                        </div>  
+                        </div>
+					</div>
+					<div class="sheet">
+                        <div class="pur border" id="divpur">
+                            &nbsp;Purpose
+                            <div class="placeh" id="placepur" contentEditable="false" data-placeholder="What  is the purpose of this concept you're developing? - Does it solve a problem, or it enhances a a certain experience? -is it serving a need or it is trying to create a new need or tap an untapped need?"></div>
+                        </div>
+                        <div class="pe border" id="divpex">
+                            &nbsp;Product Experience
+                            <div class="placeh" id="placepex" contentEditable="false" data-placeholder="Define what your customer should feel like when he uses your product/service? What emotions, feelings would define his experience? Feeling of comfort, convenience, or feeling of buying more with less(cost conscious) or feeling of greater security safety etc."></div>
+                        </div>
+                        <div class="box1 border" id="divcustrev">
+                            &nbsp;Customer Revalidation
+                            <div class="placeh" id="placecustrev" contentEditable="false" data-placeholder="Once you're finished with your feature set, test with the customer Aisori
+
+                            the features functions are useful, Speak to the customerluser"></div>
+                        </div>
+                        <div class="box2 border" id="divpfun">
+                            &nbsp;Product Functions
+                            <div class="placeh" id="placepfun" style="line-height: 10px;" contentEditable="false" data-placeholder="Functions are a products answer to user problems/need. They do something that user wants. They are often verbs in nature. Every function is powered by many features. Multitasking is a function. Browser tabs is a feature that powers the multitasking feature. A function can have one or more features powering it. Functions are very generic in nature, features are often more specific Functions can be similar to product experience. Safety (product function) provides a feeling of safety (product experience)"></div>
+                        </div>
+                        <div class="box3 border" id="divpfea">
+                            &nbsp; Product Features
+                            <div class="placeh" id="placepfea" style="line-height: 10px;" contentEditable="false" data-placeholder="Product features are specific. One or more features will power a function. Antilock Brakes, Airbags are fetures that power the safety function. Browser tabs, Apple's home button to multitask between apps are features powering the mutitasking function Each feature will have many components/sub components powering it. Sometimes a very popular component becomes a featurein itself. Like car stero is a major components and a feature at the sametime powering the in car entertainment function powering entertainment as a product experience."></div>
+                        </div>
+                        <div class="box4 border" id="divp"> 
+                           &nbsp;People
+                           <div class="placeh" id="placep" contentEditable="false" data-placeholder="Who is the key customer segment who will use this product /serice or the end product of the concept you're pusing?
+               
+                           Write hem about them, describe them a little"></div>
+                        </div>
+                        <div class="main-content border" id="divc">
+                            &nbsp; Components
+                            <div class="placeh" id="placec" style="line-height: 10px;" contentEditable="false" data-placeholder="Components build up the features. For a airbag it will comprise a list of component like bags, triggers etc, that go into making it. For a tabbed browser it will comprise of various chunks of code that will make the tabs work. In cases where the feature is a major component, you could list here the auxilliary components that are required to make the major component work. You can also list new adjustments and innovations you're planning here at the component level."></div>
+                        </div> 
+                        <div class="RRR border" id="divrrr">
+                            &nbsp;Reject, Redesign, Retain
+                            <div class="placeh" id="placerrr" contentEditable="false" data-placeholder="Post customer validation reject, those functions or features that the customers didnt find useful Redesign those that were partially useful and retain those met the bar terate with this until all unctions/features ar eaccepted"></div>
+                        </div>
+                        
+					</div>
+				</div>
+				<!--button section  -->
+				<button type="button" class="bottombuttons" id="dow">Download Sheet</button> 
+				<button type="button" class="bottombuttons" id="save">Save Sheet</button>  
+				<button type="button"  class="bottombuttons" onclick="window.history.back()" id="Home">Back Home</button> 
+			</div> 
+		</div>
+	</body>
+</html>
+
