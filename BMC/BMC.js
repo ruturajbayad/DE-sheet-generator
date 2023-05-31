@@ -27,7 +27,7 @@ const AddStikeyNotes = () => {
                 newelement.style.padding="7px 5px 0px 5px";
 				// newelement.style.backgroundColor = backColor; 
 				newelement.style.backgroundColor = "yellow";
-				var con = document.getElementById('divkeyP');
+				var con = document.getElementById('divKeyP');
 				con.appendChild(newelement); 
 			}
 			break;
