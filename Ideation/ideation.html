@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<title>Ideation Canvas</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Style -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="Ideation.css" /> 
+	<!-- Script -->
+	<script type="text/javascript" src="Ideation.js"></script>
+	<!-- <script type="text/javascript" src="dom-to-image.js"></script> -->
+	<body>
+		
+		<div class="background">
+			<!-- sidebar -->
+			<form action="#">
+				<div class="sidebar" id="sidebar">
+					<h3 class="elementtext">ELEMENTS</h3>
+					<input type="text" class="inputs" placeholder="Team ID" id="tid" minlength="1" maxlength="6" required />
+					<input type="text" class="inputs" placeholder="Project Name" id="pname" minlength="1" maxlength="20" required />
+					<button type="button" value="Add" class="sidebutton" id="setb" onclick="setheader()">Set</button>
+					<select name="element" class="inputs" id="portion">
+						<option value="Select" selected>Select Portion</option>
+						<option value="People">People</option>
+                        <option value="Activities">Activities</option>
+                        <option value="Location"> Situation/Context/Location</option>
+                        <option value="Props">Props/Tools/Objects/Equipment</option>
+					</select> 
+					<!-- <input type="number" minlength="1" maxlength="1"  placeholder="Enter numbers of elements(1 to 9)" class="inputs" id="number" required/> -->
+					<input type="text"class="inputs inpu" placeholder="Element name" id="value" minlength="1" maxlength="100" required />
+					<div id="inputs1"></div>
+					<button type="button"  value="Add"class="sidebutton" onclick="AddStikeyNotes()" id="btn1">Add</button>
+					<button type="button"  value="Reset" class="sidebutton" onclick="window.location.reload()" id="btn2">Reset</button>
+				</div>
+			</form>
+			
+			<!-- Page Content -->
+			<div class="col2">
+				<!-- mainsheet -->
+				<div id="mainsheet">
+					<!-- sheetheader -->
+					<div class="sheetheader">
+						
+                        <div class="ideation"><h5><b>The Ideanaut: Ideation Canvas</b></h5></div>
+						<div class="Project" id="pdiv">Project: <div id="d00"></div></div>
+						<div class="Team" id="tdiv">Team:<div id="d11"></div></div>
+					
+					</div>
+					<div class="sheet">
+                        <div class="container">
+                            <div class="border" id="divp">
+                                <!-- <i class="fa-solid fa-user-group"></i> -->
+                                &nbsp; <b>People</b>
+                                <div class="placeh" id="placep" contentEditable="false" data-placeholder="(Style, material & atmosphere) -Floor plan
+                                    ,Elements,features and special notes,Scenes "></div>
+                            </div>
+                        </div>
+                        <div class="container2">
+                        <div class="border" id=diva>
+                            <!-- <a href="#" class="bcy"><i class="fa-solid fa-bicycle"></i></a> -->
+                            &nbsp;<b>Activities</b>
+                            <div class="placeh" id="placea" contentEditable="false" data-placeholder="(Style, material & atmosphere) -Floor plan
+                                    ,Elements,features and special notes,Scenes "></div>
+                            </div>
+                            <div class="border" id="divl">
+                                <!-- <a href="#" class="bcy">   <i class="fa-solid fa-umbrella"></i></a> -->
+                                &nbsp; <b>Situation/Context/Location</b>
+                                <div class="placeh" id="placel" contentEditable="false" data-placeholder="(Style, material & atmosphere) -Floor plan
+                                    ,Elements,features and special notes,Scenes "></div>
+                            </div>
+                        </div>
+                        
+                        <div class="container3">
+                            <div class="border" id="divpo">
+                            <!-- <a href="#" class="logo"> -->
+                                <!-- <span class="symbol"></span><span class="title"> -->
+                                    <b>&nbsp; Props/Tools/Objects/Equipment</b>
+                                <!-- </span> -->
+                            <!-- </a> -->
+                            <div class="placeh" id="placep" contentEditable="false" data-placeholder="(Style, material & atmosphere) -Floor plan
+                                    ,Elements,features and special notes,Scenes "></div>
+                        </div>
+                        </div>
+					
+					</div>
+				</div>
+				<!--button section  -->
+				<button type="button" class="bottombuttons" id="dow">Download Sheet</button> 
+				<button type="button" class="bottombuttons" id="save">Save Sheet</button>  
+				<button type="button"  class="bottombuttons" onclick="window.history.back()" id="Home">Back Home</button> 
+			</div> 
+		</div>
+	</body>
+</html>
+

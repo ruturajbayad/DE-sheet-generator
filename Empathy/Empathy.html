@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<title>Empathy Canvas</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Style -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="Empathy.css" /> 
+	<!-- Script -->
+	<script type="text/javascript" src="Empathy.js"></script>
+	<!-- <script type="text/javascript" src="dom-to-image.js"></script> -->
+	<body>
+		
+		<div class="background">
+			<!-- sidebar -->
+			<form action="#">
+				<div class="sidebar" id="sidebar">
+					<h3 class="elementtext">ELEMENTS</h3>
+					<input type="text" class="inputs" placeholder="Design For" id="defor" minlength="1" maxlength="20" required />
+					<input type="text" class="inputs" placeholder="Design By" id="deby" minlength="1" maxlength="20" required />
+                    <input type="text" class="inputs" placeholder="Date" id="date" onfocus="(this.type='date')" required/>
+					<input type="text" class="inputs" placeholder="Version" id="version" minlength="1" maxlength="4" required />
+					<button type="button" value="Add" class="sidebutton" id="setb" onclick="setheader()">Set</button>
+					<select name="element" class="inputs" id="portion">
+						<option value="Select" selected>Select Portion</option>
+						<option value="USER">USER</option>
+						<option value="STAKEHOLDERS">STAKEHOLDERS</option>
+						<option value="ACTIVITIES">ACTIVITIES</option>
+					</select> 
+					<!-- <input type="number" minlength="1" maxlength="1"  placeholder="Enter numbers of elements(1 to 9)" class="inputs" id="number" required/> -->
+					<input type="text"class="inputs inpu" placeholder="Element name" id="value" minlength="1" maxlength="100" required />
+					<div id="inputs1"></div>
+					<button type="button"  value="Add"class="sidebutton" onclick="AddStikeyNotes()" id="btn1">Add</button>
+					<button type="button"  value="Reset" class="sidebutton" onclick="window.location.reload()" id="btn2">Reset</button>
+				</div>
+			</form>
+			
+			<!-- Page Content -->
+			<div class="col2">
+				<!-- mainsheet -->
+				<div id="mainsheet">
+					<!-- sheetheader -->
+					<div class="sheetheader">
+						
+							<div class="DFor">Design For <div id="d00"></div></div>
+							<div class="DBy">Design By <div id="d11"></div></div>
+							<div class="date">Date <div id="d22"></div></div>
+							<div class="version">Version <div id="d33"></div></div>
+					
+						
+					</div>
+					<div class="sheet">
+                        <div class="container">
+							<div class="border item1" id="divU"><b>USER</b>
+								<div class="placeh" id="placeu" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) - Scene of user in context , Elements, features and special notes "></div>
+							</div>
+							<div class="border item2" id="divS"><b>STAKEHOLDERS</b>
+							<div class="placeh" id="places" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) - Scene of user in context , Elements, features and special notes "></div></div>
+							
+						</div>
+						<div class="container2">
+							<div class="border item3" id="divA"><b>ACTIVITIES</b>
+								<div class="placeh" id="placea" contentEditable="false" data-placeholder="  - Sketch/photo Summary of activity , Elements, features and special notes"></div>
+							</div>
+						</div>
+						<div class="container3 border">
+							<div class="item item4" ><b>STORY BOARDING</b>
+								<br/>
+								<div class="item5" >HAPPY</div>
+								<textarea id="hp1" rows="2"></textarea>
+							</div>
+						</div>
+						
+						<div class="container4 border">
+							<div class="item">
+								<div class="item6" >HAPPY</div>
+								<textarea id="hp2" rows="2" ></textarea>
+							</div>
+						</div>
+						
+						<div class="container5 border">
+							<div class="item">
+								<div class="item7" >SAD</div>
+								<textarea id="sd1" rows="2"></textarea>
+							</div>
+						</div>
+						
+						<div class="container6 border">
+							<div class="item">
+								<div class="item8" >SAD</div>
+								<textarea id="sd2" rows="2"></textarea>
+							</div>
+							
+						</div>
+					
+					</div>
+				</div>
+				<!--button section  -->
+				<button type="button" class="bottombuttons" id="dow">Download Sheet</button> 
+				<button type="button" class="bottombuttons" id="save">Save Sheet</button>  
+				<button type="button"  class="bottombuttons" onclick="window.history.back()" id="Home">Back Home</button> 
+			</div> 
+		</div>
+	</body>
+</html>
+

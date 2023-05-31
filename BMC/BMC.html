@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<title>BMC Sheet</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Style -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="BMC.css" /> 
+	<!-- Script -->
+	<script type="text/javascript" src="BMC.js"></script>
+	<!-- <script type="text/javascript" src="dom-to-image.js"></script> -->
+	<body>
+		
+		<div class="background">
+			<!-- sidebar -->
+			<form action="#">
+				<div class="sidebar" id="sidebar">
+					<h3 class="elementtext">ELEMENTS</h3>
+					<input type="text" class="inputs" placeholder="Design For" id="defor" minlength="1" maxlength="20" required />
+					<input type="text" class="inputs" placeholder="Design By" id="deby" minlength="1" maxlength="20" required />
+                    <input type="text" class="inputs" placeholder="Date" id="date" onfocus="(this.type='date')" required/>
+					<input type="text" class="inputs" placeholder="Version" id="version" minlength="1" maxlength="4" required />
+					<button type="button" value="Add" class="sidebutton" id="setb" onclick="setheader()">Set</button>
+					<select name="element" class="inputs" id="portion">
+						<option value="Select" selected>Select Portion</option>
+						<option value="Key Partners">Key Partners</option>
+                        <option value="Key Activities">Key Activities</option>
+                        <option value="Value Propositions">Value Propositions</option>
+                        <option value="Customer Relationships">Customer Relationships</option>
+                        <option value="Customer Segments">Customer Segments</option>
+                        <option value="Key Resources">Key Resources</option>
+                        <option value="Channels">Channels</option>
+                        <option value="Cost Structure">Cost Structure</option>
+                        <option value="Revenue Stream">Revenue Stream</option>
+					</select> 
+					<!-- <input type="number" minlength="1" maxlength="1"  placeholder="Enter numbers of elements(1 to 9)" class="inputs" id="number" required/> -->
+					<input type="text"class="inputs inpu" placeholder="Element name" id="value" minlength="1" maxlength="100" required />
+					<div id="inputs1"></div>
+					<button type="button"  value="Add"class="sidebutton" onclick="AddStikeyNotes()" id="btn1">Add</button>
+					<button type="button"  value="Reset" class="sidebutton" onclick="window.location.reload()" id="btn2">Reset</button>
+				</div>
+			</form>
+			
+			<!-- Page Content -->
+			<div class="col2">
+				<!-- mainsheet -->
+				<div id="mainsheet">
+					<!-- sheetheader -->
+					<div class="sheetheader">
+						<div class="Title"><b>&nbsp;The Bussiness Model Canvas</b></div>
+						
+							<div class="DFor">Design For : <div id="d00"></div></div>
+							<div class="DBy">Design By :<div id="d11"></div></div>
+							<div class="date">Date :<div id="d22"></div></div>
+							<div class="version">Version :<div id="d33"></div></div>
+					
+						
+					</div>
+					<div class="sheet">
+						<div class="box1 border" id="divKeyP">
+							&nbsp;Key Partners
+							<div class="placeh" id="placeKeyP" contentEditable="false" data-placeholder="-Who are our Key Partners? -Who are our key suppliers? -Which Key Resources are we acquairing from partners? -Which Key Activities do partners perform?"></div>
+							<!-- <i class="fa-solid fa-link il"></i> -->
+						</div>
+						<div class="box3 border" id="divValP">
+							&nbsp; Value Propositions
+							<div class="placeh" id="placeValP" contentEditable="false" data-placeholder="-What value do we deliver to the customer? -Which one of our customer’s problems are we
+						helping to solve? -What bundles of products and services are we
+						offering to each Customer Segment? -Which customer needs are we satisfying?"></div>
+							<!-- <i class="fa-solid fa-gift"></i> -->
+						</div>
+						<div class="box2 border" id="divKeyA">
+							&nbsp;Key Activities
+							<div class="placeh" id="placeKeyA" contentEditable="false" data-placeholder="What Key Activities do our Value Propositions require? -Our Distribution Channels? -Customer Relationships? -Revenue streams?"></div>
+							<!-- <i class="fa-solid fa-square-check"></i> -->
+						</div>
+						<div class="box4 border" id="divCustR">
+							&nbsp;Customer Relationships
+							<div class="placeh" id="placeCustR" contentEditable="false" data-placeholder="-What type of relationship does each of our
+						Customer Segments expect us to establish
+						and maintain with them? -Which ones have we established? -How are they integrated with the rest of our
+						business model? -How costly are they?"></div>
+							<!-- <i class="fa-solid fa-heart"></i> -->
+						</div>
+						<div class="box5 border" id="divCustS">
+							&nbsp;Customer Segments
+							<div class="placeh" id="placeCustS" contentEditable="false" data-placeholder="-For whom are we creating value? -Who are our most important customers?"></div>
+						</div>
+						<div class="box6 border" id="divKeyR">
+							&nbsp;Key Resources
+							<div class="placeh" id="placeKeyR" contentEditable="false" data-placeholder="-What Key Resources do our Value Propositions require? -Our Distribution Channels? Customer Relationships? -Revenue Streams?"></div>
+						</div>
+						<div class="box7 border" id="divC">
+							&nbsp;Channels
+							<div class="placeh" id="placeC" contentEditable="false" data-placeholder="-Through which Channels do our Customer Segments
+						want to be reached? -How are we reaching them now? -How are our Channels integrated? -Which ones work best? -Which ones are most cost-efficient? -How are we integrating them with customer routines?"></div>
+							<!-- <i class="fa-solid fa-truck"></i> -->
+						</div>
+						<div class="box8 border" id="divCostS">
+							&nbsp;Cost Structure
+							<div class="placeh" id="placeCostS" contentEditable="false" data-placeholder="-What are the most important costs inherent in our business model? -Which Key Resources are most expensive? -Which Key Activities are most expensive?"></div>
+							<!-- <i class="fa-solid fa-tags fa-flip-horizontal"></i> -->
+						</div>
+						<div class="box9 border" id="divRevS">
+							&nbsp;Revenue Stream
+							<div class="placeh" id="placeRevS" contentEditable="false" data-placeholder="-For what value are our customers really willing to pay? -For what do they currently pay? -How are they currently paying? -How would they prefer to pay? -How much does each Revenue Stream contribute to overall revenues?"></div>
+							<!-- <i class="fa-solid fa-sack-dollar"></i> -->
+							</div>
+					</div>
+				</div>
+				<!--button section  -->
+				<button type="button" class="bottombuttons" id="dow">Download Sheet</button> 
+				<button type="button" class="bottombuttons" id="save">Save Sheet</button>  
+				<button type="button"  class="bottombuttons" onclick="window.history.back()" id="Home">Back Home</button> 
+			</div> 
+		</div>
+	</body>
+</html>
+

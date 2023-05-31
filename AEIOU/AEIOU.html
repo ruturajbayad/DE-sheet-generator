@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<title>AEIOU Sheet</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Style -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="AEIOU.css" /> 
+	<!-- Script -->
+	<script type="text/javascript" src="AEIOU.js"></script>
+	<script type="text/javascript" src="dom-to-image.js"></script>
+	<body>
+		
+		<div class="background">
+			<!-- sidebar -->
+			<form action="#">
+				<div class="sidebar" id="sidebar">
+					<h3 class="elementtext">ELEMENTS</h3>
+					<input type="text" class="inputs" placeholder="Group id" id="gid" minlength="1" maxlength="6" required />
+					<input type="text" class="inputs" placeholder="Date" id="date" onfocus="(this.type='date')" required/>
+					<input type="text" class="inputs" placeholder="Domain Name" id="dname" minlength="1" maxlength="20" required />
+					<input type="text" class="inputs" placeholder="Version" id="version" minlength="1" maxlength="4" required />
+					<button type="button" value="Add" class="sidebutton" id="setb" onclick="setheader()">Set</button>
+					<select name="element" class="inputs" id="portion">
+						<option value="Select" selected>Select Portion</option>
+						<option value="Environment">Environment</option>
+						<option value="Activity">Activity</option>
+						<option value="Users">Users</option>
+						<option value="Interactions">Interactions</option>
+						<option value="Objects">Objects</option>
+					</select> 
+					<!-- <input type="number" minlength="1" maxlength="1"  placeholder="Enter numbers of elements(1 to 9)" class="inputs" id="number" required/> -->
+					<input type="text"class="inputs inpu" placeholder="Element name" id="value" minlength="1" maxlength="100" required />
+					<div id="inputs1"></div>
+					<button type="button"  value="Add"class="sidebutton" onclick="AddStikeyNotes() " id="btn1">Add</button>
+					<button type="button"  value="Reset" class="sidebutton" onclick="window.location.reload()" id="btn2">Reset</button>
+				</div>
+			</form>
+			
+			<!-- Page Content -->
+			<div class="col2">
+				<!-- mainsheet -->
+				<div id="mainsheet">
+					<!-- sheetheader -->
+					<div class="sheetheader">
+						<div><h3><b>&nbsp;AEIOU Summary:</b></h3></div>
+						<div class="group">
+							<div class="id">Group ID : <div id="d00"></div></div>
+							<div class="date">Date :<div id="d22"></div></div>
+							<div class="name">Domain Name :<div id="d11"></div></div>
+						</div>
+						<div class="version">Version :<div id="d33"></div></div>
+					</div>
+					<div class="sheet">
+						<!-- EIOportion -->
+						<div class="container">   
+							<div class="border" id="dive">&nbsp Environment:<div class="placeh" id="place" contentEditable="false" data-placeholder="(Style, material & atmosphere) -Floor plan,Elements,features and special notes,Scenes."></div></div>
+							<div class="border" id="divi">&nbsp Interactions:<div class="placeh" id="placei" contentEditable="false" data-placeholder="  (Who is interacting with whom, what?), -Scene of interaction (How it is being done) -Elements,features and special notes"></div></div>
+							<div class="border" id="divo">&nbsp Objects:<div class="placeh" id="placeo" contentEditable="false" data-placeholder="(What components are involved? How?) - Inventory of key objects , Elements, features and special notes  "></div></div>
+						</div>
+						<!-- AUportion -->
+						<div class="container2">
+							<div class="border" id="diva">&nbsp Activities:<div class="placeh" id="placea" contentEditable="false" data-placeholder="  - Sketch/photo Summary of activity , Elements, features and special notes"></div></div>
+							<div class="border" id="divu">&nbsp Users:<div class="placeh" id="placeu" contentEditable="false" data-placeholder=" (Who is present? Role and responsibilities) - Scene of user in context , Elements, features and special notes "></div></div>
+						</div>
+					</div>
+				</div>
+				<!--button section  -->
+				<button type="button" class="bottombuttons" id="dow">Download Sheet</button> 
+				<button type="button" class="bottombuttons" id="save">Save Sheet</button>  
+				<button type="button"  class="bottombuttons" onclick="window.history.back()" id="Home">Back Home</button> 
+			</div> 
+		</div>
+	</body>
+</html>
