@@ -79,7 +79,7 @@ const AddStikeyNotes = () => {
 				poerion1.value = "Select";
 				return;
 				}else{
-				document.getElementById("placep").innerText = " ";
+				document.getElementById("placepo").innerText = " ";
 				newelement.className = 'box';
 				newelement.id = 'div1';
 				newelement.innerText = notevale;
