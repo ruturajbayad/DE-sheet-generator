@@ -172,7 +172,7 @@ const AddStikeyNotes = () => {
 			}
 			break;
             case "Revenue Stream": 
-			const RevenueStream = document.getElementById("divRevs").childElementCount;
+			const RevenueStream = document.getElementById("divRevS").childElementCount;
 			if( RevenueStream >= 10)
 			{
 				alert("You can't add more than 9 Sticky Notes");
