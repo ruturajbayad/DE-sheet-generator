@@ -281,16 +281,33 @@ function setheader()
     }
 }
 //Download Image
-var sheet = document.getElementById("divmain");
-var dow = document.getElementById("dow");
-dow.addEventListener("click",() =>{
-  domtoimage.toPng(sheet).then((data)=>{
-    var link = document.createElement("a");
-    link.download="BMC-Sheet.png";
-    link.href = data;
-    link.click();
-  })  
-});
+function downloadDivAsPng() {
+    const element = document.getElementById('sheet');
+  
+    html2canvas(element)
+      .then(function(canvas) {
+        // Convert the canvas to a data URL representing a PNG image
+        const dataURL = canvas.toDataURL('image/png');
+  
+        // Create a temporary link element and set the download attribute
+        const link = document.createElement('a');
+        link.href = dataURL;
+        link.download = 'LNM.png';
+  
+        // Trigger a click on the link to start the download
+        link.click();
+      });
+  }
+// var sheet = document.getElementById("divmain");
+// var dow = document.getElementById("dow");
+// dow.addEventListener("click",() =>{
+//   domtoimage.toPng(sheet).then((data)=>{
+//     var link = document.createElement("a");
+//     link.download="BMC-Sheet.png";
+//     link.href = data;
+//     link.click();
+//   })  
+// });
 //Save Image
 var save = document.getElementById("save");
 save.addEventListener("click", () => {
