@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<title>LNM Sheet</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Style -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="LNM.css" /> 
+	<!-- Script -->
+	<script type="text/javascript" src="LNM.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+	<!-- <script type="text/javascript" src="dom-to-image.js"></script> -->
+	<body>
+		
+		<div class="backgroundlnm">
+			<!-- sidebar -->
+			<form action="#">
+				<div class="sidebarlnm" id="sidebarlnm">
+					<h3 class="elementtextlnm">ELEMENTS</h3>
+                    <input type="text" class="inputslnm" placeholder="Group id" id="gidlnm" minlength="1" maxlength="6" required />
+                    <input type="text" class="inputslnm" placeholder="Date" id="datelnm" onfocus="(this.type='date')" required/>
+                    <input type="text" class="inputslnm" placeholder="Purpose / Product Concept" id="pnamelnm" minlength="1" maxlength="20" required />
+					
+					<button type="button" value="Add" class="sidebuttonlnm" id="setblnm" onclick="setheader()">Set</button>
+					<select name="element" class="inputslnm" id="portionlnm">
+						<option value="Select" selected>Select Portion</option>
+						<option value="II1">BE II -> Tools</option>
+						<option value="II2">BE II -> Applicable Standards</option>
+						<option value="II3">BE II -> Software</option>
+						<option value="II4">BE II -> Components Materials' Strength</option>
+
+                        <option value="III1">BE III -> Tools</option>
+						<option value="III2">BE III -> Applicable Standards</option>
+						<option value="III3">BE III -> Software</option>
+						<option value="III4">BE III -> Components Materials' Strength</option>
+
+                        <option value="IV1">BE IV -> Tools</option>
+						<option value="IV2">BE IV -> Applicable Standards</option>
+						<option value="IV3">BE IV -> Software</option>
+						<option value="IV4">BE IV -> Components Materials' Strength</option>
+                    
+					</select> 
+					<!-- <input type="number" minlength="1" maxlength="1"  placeholder="Enter numbers of elements(1 to 9)" class="inputs" id="number" required/> -->
+					<input type="text"class="inputslnm" placeholder="Element name" id="valuelnm" minlength="1" maxlength="100" required />
+					<div id="inputs1lnm"></div>
+					<button type="button"  value="Add"class="sidebuttonlnm" onclick="AddStikeyNotes()" id="btn1lnm">Add</button>
+					<button type="button"  value="Reset" class="sidebuttonlnm" onclick="window.location.reload()" id="btn2lnm">Reset</button>
+				</div>
+			</form>
+			
+			<!-- Page Content -->
+			<div class="col2lnm">
+				<!-- mainsheet -->
+				<div id="sheetlnm">
+					<!-- sheetheader -->
+					<div class="sheetheaderlnm">
+						<div class="Titlelnm"><b>&nbsp;Learning Needs Matrix</b></div>
+				
+                        <div class="idlnm">Group ID :- <div id="d11lnm"></div></div>
+			            <div class="datelnm">Date :- <div id="d22lnm"></div></div>
+			
+					</div>
+				
+
+                        <main>
+
+                            <div class="boxeslnm box1lnm" id="b1lnm">Tools /<br> Method / Theories / Application process involved</div>
+                            <div class="boxeslnm box2lnm" id="b2lnm"><p>DURING</p><div class="placehlnm" id="placeh2lnm" contentEditable="false" data-placeholder=""></div></div>
+                     
+                            <div class="boxeslnm box3lnm" id="b3lnm"><p>BE IV</p><div class="placehlnm" id="placeh3lnm" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxeslnm box4lnm" id="b4lnm">Applicable Standards and Design Specifications / Principle and Experiments</div>
+                    
+                            <div class="boxeslnm box5lnm"></div>
+                            <div class="boxeslnm box6lnm" id="b6lnm"><p>DURING</p><div class="placehlnm" id="placeh6lnm" contentEditable="false" data-placeholder=""></div></div>
+                    
+                            <div class="boxeslnm box7lnm" id="b7lnm"><p>BE III</p><div class="placehlnm" id="placeh7lnm" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxeslnm box8lnm"></div>
+                    
+                            <div class="boxeslnm box9lnm"></div>
+                            <div class="boxeslnm box10lnm" id="b10lnm"><p>DURING</p><div class="placehlnm" id="placeh10lnm" contentEditable="false" data-placeholder=""></div></div>
+                     
+                            <div class="boxeslnm box11lnm" id="b11lnm"><p>BE II</p><div class="placehlnm" id="placeh11lnm" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxeslnm box12lnm"></div>
+                     
+                            <div class="box13lnm" id="b13lnm"> Purpose / Product Concept <div id="d33lnm"></div></div>
+                            <!-- <div class="boxeslnm box13" id="b13"> Purpose / Product Concept <div id="d33"></div></div> -->
+                            
+                            <div class="boxeslnm box14lnm" id="b14lnm">Software / Simulation / <br>Skill / Mathematical Requirement</div>
+                            <div class="boxeslnm box15lnm"></div>
+                            <div class="boxeslnm box16lnm"></div>
+                            <div class="boxeslnm box17lnm"></div>
+                            <div class="boxeslnm box18lnm"></div>
+                            <div class="boxeslnm box19lnm" id="b19lnm">Components Materials' Strength Criteria (exploration-Varieties / Testing requirements)</div>
+                            <div class="boxeslnm box20lnm" id="b20lnm"><div class="placehlnm" id="placeh20lnm" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxeslnm box21lnm" id="b21lnm"><div class="placehlnm" id="placeh21lnm" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxeslnm box22lnm" id="b22lnm"><div class="placehlnm" id="placeh22lnm" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxeslnm box23lnm" id="b23lnm"><div class="placehlnm" id="placeh23lnm" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxeslnm box24lnm" id="b24lnm"><div class="placehlnm" id="placeh24lnm" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxeslnm box25lnm" id="b25lnm"><div class="placehlnm" id="placeh25lnm" contentEditable="false" data-placeholder=""></div></div>
+                            
+                        </main>
+						<!-- <div class="box1 border" id="divKeyP">
+							&nbsp;Key Partners
+							<div class="placeh" id="placeKeyP" contentEditable="false" data-placeholder=""></div>
+						</div> -->
+						
+					</div>
+			
+				<!--button section  -->
+				<button type="button" class="bottombuttonslnm" id="dowlnm"  onclick="downloadDivAsPng()">Download Sheet</button> 
+				<button type="button" class="bottombuttonslnm" id="savelnm">Save Sheet</button>  
+				<button type="button"  class="bottombuttonslnm" onclick="window.history.back()" id="Homelnm">Back Home</button> 
+            </div>
+			</div> 
+		
+	</body>
+</html>
+
