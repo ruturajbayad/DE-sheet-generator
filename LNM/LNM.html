@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<title>LNM Sheet</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Style -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="LNM.css" /> 
+	<!-- Script -->
+	<script type="text/javascript" src="LNM.js"></script>
+	<!-- <script type="text/javascript" src="dom-to-image.js"></script> -->
+	<body>
+		
+		<div class="background">
+			<!-- sidebar -->
+			<form action="#">
+				<div class="sidebar" id="sidebar">
+					<h3 class="elementtext">ELEMENTS</h3>
+                    <input type="text" class="inputs" placeholder="Group id" id="gid" minlength="1" maxlength="6" required />
+                    <input type="text" class="inputs" placeholder="Date" id="date" onfocus="(this.type='date')" required/>
+                    <input type="text" class="inputs" placeholder="Purpose / Product Concept" id="pname" minlength="1" maxlength="20" required />
+					
+					<button type="button" value="Add" class="sidebutton" id="setb" onclick="setheader()">Set</button>
+					<select name="element" class="inputs" id="portion">
+						<option value="Select" selected>Select Portion</option>
+						<option value="II1">BE II -> Tools</option>
+						<option value="II2">BE II -> Applicable Standards</option>
+						<option value="II3">BE II -> Software</option>
+						<option value="II4">BE II -> Components Materials' Strength</option>
+
+                        <option value="III1">BE III -> Tools</option>
+						<option value="III2">BE III -> Applicable Standards</option>
+						<option value="III3">BE III -> Software</option>
+						<option value="III4">BE III -> Components Materials' Strength</option>
+
+                        <option value="IV1">BE IV -> Tools</option>
+						<option value="IV2">BE IV -> Applicable Standards</option>
+						<option value="IV3">BE IV -> Software</option>
+						<option value="IV4">BE IV -> Components Materials' Strength</option>
+                    
+					</select> 
+					<!-- <input type="number" minlength="1" maxlength="1"  placeholder="Enter numbers of elements(1 to 9)" class="inputs" id="number" required/> -->
+					<input type="text"class="inputs inpu" placeholder="Element name" id="value" minlength="1" maxlength="100" required />
+					<div id="inputs1"></div>
+					<button type="button"  value="Add"class="sidebutton" onclick="AddStikeyNotes()" id="btn1">Add</button>
+					<button type="button"  value="Reset" class="sidebutton" onclick="window.location.reload()" id="btn2">Reset</button>
+				</div>
+			</form>
+			
+			<!-- Page Content -->
+			<div class="col2">
+				<!-- mainsheet -->
+				<div id="sheet">
+					<!-- sheetheader -->
+					<div class="sheetheader">
+						<div class="Title"><b>&nbsp;Learning Needs Matrix</b></div>
+				
+                        <div class="id">Group ID :- <div id="d11"></div></div>
+			            <div class="date">Date :- <div id="d22"></div></div>
+			
+					</div>
+				
+
+                        <main>
+
+                            <div class="boxes box1" id="b1">Tools /<br> Method / Theories / Application process involved</div>
+                            <div class="boxes box2" id="b2"><p class="fixed-text">DURING</p><div class="placeh" id="placeh2" contentEditable="false" data-placeholder=""></div></div>
+                     
+                            <div class="boxes box3" id="b3"><p class="fixed-text">BE IV</p><div class="placeh" id="placeh3" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxes box4" id="b4">Applicable Standards and Design Specifications / Principle and Experiments</div>
+                    
+                            <div class="boxes box5"></div>
+                            <div class="boxes box6" id="b6"><p class="fixed-text">DURING</p><div class="placeh" id="placeh6" contentEditable="false" data-placeholder=""></div></div>
+                    
+                            <div class="boxes box7" id="b7"><p class="fixed-text">BE III</p><div class="placeh" id="placeh7" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxes box8"></div>
+                    
+                            <div class="boxes box9"></div>
+                            <div class="boxes box10" id="b10"><p class="fixed-text">DURING</p><div class="placeh" id="placeh10" contentEditable="false" data-placeholder=""></div></div>
+                     
+                            <div class="boxes box11" id="b11"><p class="fixed-text">BE II</p><div class="placeh" id="placeh11" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxes box12"></div>
+                     
+                            <div class="box13" id="b13"> Purpose / Product Concept <div id="d33"></div></div>
+                            <!-- <div class="boxes box13" id="b13"> Purpose / Product Concept <div id="d33"></div></div> -->
+                            
+                            <div class="boxes box14" id="b14">Software / Simulation / <br>Skill / Mathematical Requirement</div>
+                            <div class="boxes box15"></div>
+                            <div class="boxes box16"></div>
+                            <div class="boxes box17"></div>
+                            <div class="boxes box18"></div>
+                            <div class="boxes box19" id="b19">Components Materials' Strength Criteria (exploration-Varieties / Testing requirements)</div>
+                            <div class="boxes box20" id="b20"><div class="placeh" id="placeh20" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxes box21" id="b21"><div class="placeh" id="placeh21" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxes box22" id="b22"><div class="placeh" id="placeh22" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxes box23" id="b23"><div class="placeh" id="placeh23" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxes box24" id="b24"><div class="placeh" id="placeh24" contentEditable="false" data-placeholder=""></div></div>
+                            <div class="boxes box25" id="b25"><div class="placeh" id="placeh25" contentEditable="false" data-placeholder=""></div></div>
+                            
+                        </main>
+						<!-- <div class="box1 border" id="divKeyP">
+							&nbsp;Key Partners
+							<div class="placeh" id="placeKeyP" contentEditable="false" data-placeholder=""></div>
+						</div> -->
+						
+					</div>
+			
+				<!--button section  -->
+				<button type="button" class="bottombuttons" id="dow">Download Sheet</button> 
+				<button type="button" class="bottombuttons" id="save">Save Sheet</button>  
+				<button type="button"  class="bottombuttons" onclick="window.history.back()" id="Home">Back Home</button> 
+            </div>
+			</div> 
+		
+	</body>
+</html>
+
